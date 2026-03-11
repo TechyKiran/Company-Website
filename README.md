@@ -17,18 +17,6 @@ The Company Website is a dynamic web application developed to represent a compan
 - HTML5
 - CSS3
 
-## Project Structure
-
-Company-Website
-│
-├── src/ (Java source files)
-├── WebContent / webapp
-│ ├── html pages
-│ ├── css files
-│ └── images
-│
-└── README.md
-
 
 ## How to Run the Project
 1. Clone the repository.
