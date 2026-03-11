@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Careers | Jobs List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome for User Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+        }
+
+        /* NAVBAR */
+        header {
+            background: #0a0a4a;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            font-size: 22px;
+        }
+
+        nav {
+            position: relative;
+        }
+
+        /* USER MENU */
+        .user-menu {
+            position: relative;
+            display: inline-block;
+        }
+
+        .user-icon {
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 35px;
+            background: white;
+            min-width: 150px;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 12px 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .dropdown a:hover {
+            background: #f1f1f1;
+        }
+
+        .user-menu:hover .dropdown {
+            display: block;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+        }
+
+        /* JOBS SECTION */
+        .jobs-section {
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .job-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .job-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .job-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #0a0a4a;
+        }
+
+        .job-card p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .job-card a {
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            color: #0a0a4a;
+        }
+
+        .job-card a:hover {
+            color: #ff6600;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0a0a4a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            header {
+                text-align: center;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h2>KK Careers</h2>
+
+        <nav>
+            <div class="user-menu">
+                <span class="user-icon">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+
+                <div class="dropdown">
+                    <a href="profile.html">Profile</a>
+                    <a href="logout">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Jobs List</h1>
+    </section>
+
+    <!-- JOBS -->
+    <section class="jobs-section">
+        <div class="jobs-grid">
+
+            <div class="job-card">
+                <h3>Voice Process Executive</h3>
+                <p>Handle customer calls and provide excellent support.</p>
+                <a href="open-Voice-Process.html">READ MORE »</a>
+            </div>
+
+            <div class="job-card">
+                <h3>Voice & Non-Voice Process</h3>
+                <p>International and domestic process roles available.</p>
+                <a href="open-Voice-Process.html">READ MORE »</a>
+            </div>
+
+            <div class="job-card">
+                <h3>Customer Service Executive</h3>
+                <p>Resolve customer queries via calls, chats, and emails.</p>
+                <a href="open-Voice-Process.html">READ MORE »</a>
+            </div>
+
+            <div class="job-card">
+                <h3>HR Internship</h3>
+                <p>Hands-on HR exposure with recruitment and operations.</p>
+                <a href="open-hr.html">READ MORE »</a>
+            </div>
+
+            <div class="job-card">
+                <h3>Technical Support</h3>
+                <p>Provide technical assistance to customers.</p>
+                <a href="open-technical-support.html">READ MORE »</a>
+            </div>
+
+            <div class="job-card">
+                <h3>Business Development Executive</h3>
+                <p>Client acquisition and relationship management.</p>
+                <a href="open-Business-devop.html">READ MORE »</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 KK Technologies Job Consultancy | All Rights Reserved
+    </footer>
+
+</body>
+</html>

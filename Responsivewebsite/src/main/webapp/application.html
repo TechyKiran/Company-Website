@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Company Application Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="application.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Job Application Form</h1>
+    <p class="subtitle">Apply for Open Role Positions</p>
+
+    <form action="apply" method="post" enctype="multipart/form-data">
+
+        <!-- Name Row -->
+        <div class="row">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+        </div>
+
+        <!-- Contact Row -->
+        <div class="row">
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" name="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label>Department</label>
+                <input type="text" name="department" placeholder="IT / HR / Testing">
+            </div>
+        </div>
+
+        <!-- Role & Experience -->
+        <div class="row">
+            <div class="form-group">
+                <label>Role Applying For</label>
+                <select name="role" required>
+                    <option value="">-- Select Role --</option>
+                    <option>Java Developer</option>
+                    <option>Web Developer</option>
+                    <option>Full Stack Developer</option>
+                    <option>Software Tester</option>
+                    <option>HR Executive</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Years of Experience</label>
+                <input type="number" name="experience" min="0" max="30" placeholder="0">
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="form-group full">
+            <label>Key Skills</label>
+            <input type="text" name="skills" placeholder="Java, HTML, CSS, SQL">
+        </div>
+
+        <!-- Resume -->
+        <div class="form-group full">
+            <label>Upload Resume (PDF/DOC)</label>
+            <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+        </div>
+
+        <!-- Cover Letter -->
+        <div class="form-group full">
+            <label>Cover Letter</label>
+            <textarea name="coverletter" rows="4" placeholder="Write a short cover letter..."></textarea>
+        </div>
+
+        <button type="submit">Submit Application</button>
+
+    </form>
+</div>
+
+</body>
+</html>

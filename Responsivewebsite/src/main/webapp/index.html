@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KK Technologies</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    height: 60px;
+    background: #0d1b2a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    font-weight: bold;
+}
+
+/* Top nav links */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+}
+
+.nav-links a:hover {
+    color: #00b4d8;
+}
+
+/* ===== HAMBURGER ===== */
+.menu-icon {
+    width: 30px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: 0.4s;
+}
+
+.menu-icon span:nth-child(1) { top: 0; }
+.menu-icon span:nth-child(2) { top: 9px; }
+.menu-icon span:nth-child(3) { top: 18px; }
+
+/* Transform to X */
+#menu-toggle:checked + .navbar .menu-icon span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 9px;
+}
+
+#menu-toggle:checked + .navbar .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .navbar .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 9px;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    position: fixed;
+    top: 60px;   /* below navbar */
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #1b263b;
+    padding-top: 20px;
+    transition: 0.4s;
+    z-index: 999;
+}
+
+#menu-toggle:checked ~ .sidebar {
+    left: 0;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background: #00b4d8;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    margin-top: 60px; /* because navbar is fixed */
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("https://images.unsplash.com/photo-1498050108023-c5249f4df085")
+                center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    max-width: 600px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #00b4d8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0077b6;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Hidden Checkbox -->
+<input type="checkbox" id="menu-toggle">
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+    <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <div class="logo">KK Technologies</div>
+
+    <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="service.html">Services</a>
+        <a href="Careers.html">Careers</a>
+        <a href="loginemp.html">Contact</a>
+    </div>
+
+</header>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <a href="#">Home</a>
+    <a href="login.html">Admin</a>
+    <a href="loginemp.html">Employees</a>
+</div>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div>
+        <h1>Building Smart Digital Solutions</h1>
+        <p>
+            We deliver scalable, secure and innovative software solutions
+            that empower businesses worldwide.
+        </p>
+        <a href="Careers.html" class="btn">Join Our Team</a>
+    </div>
+</section>
+
+</body>
+</html>
